@@ -75,7 +75,6 @@ vbCritical | 16 | Display Critical Message icon.
 vbQuestion | 32 | Display Warning Query icon.
 vbExclamation | 48 | Display Warning Message icon.
 vbInformation | 64 | Display Information Message icon.
-vbDefaultButton1 | 0 | First button is default.
 vbDefaultButton2 | 256 | Second button is default.
 vbDefaultButton3 | 512 | Third button is default.
 vbDefaultButton4 | 768 | Fourth button is default.
