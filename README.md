@@ -12,5 +12,28 @@ pip install cyutils
 
 Now at the top of your python library add:
 ```python
-import cytils
+import cyutils
 ```
+
+## Colored Text
+To print colored text, you first need to import the colored text module:
+```python
+from cyutils.tools import colored_text
+```
+You can then use the `clrprint()` function to print colored text:
+```python
+from cyutils.tools import colored_text
+
+colored_text.clrprint("<Text goes here>", "red")
+```
+
+The colored text module supports a wide range of colors:
+- standard
+- black
+- red
+- green
+- yellow
+- blue
+- magenta
+- cyan
+- white
