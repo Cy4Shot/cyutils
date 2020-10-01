@@ -50,7 +50,7 @@ To begin, you need to import the message boxes module:
 from cyutils.io import message_boxes as mb
 ```
 This package will allow you to create a message box with a simple `message_box()` function.
-> **_ NOTE: THIS FUNCTION WILL ONLY WORK ON WINDOWS OPERATING SYSTEMS_**
+> **NOTE: THIS FUNCTION WILL ONLY WORK ON WINDOWS OPERATING SYSTEMS**
 
 ```python
 from cyutils.io import message_boxes as mb
@@ -60,7 +60,9 @@ mb.message_box("<Window Title>", "<Box Contents>", "< (OPTIONAL) VB Overloads>")
 
 For the VB Overload you can either add text overloads:
 > e.g. "vbOkOnly+vbCritical"
+
 Or get the sum of the overloads that you want from the table below:
+
 Constant | Value | Description
 --- | --- | ---
 vbOKOnly | 0 | Display OK button only.
