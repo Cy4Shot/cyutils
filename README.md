@@ -7,7 +7,8 @@
 
 You can install CyUtils with <a href="https://pip.pypa.io/en/stable/installing/">pip</a>! Once you have installed pip, open Command Prompt or Powershell and type:
 ```
-pip install cyutils```
+pip install cyutils
+```
 
 Now at the top of your python library add:
 ```python
