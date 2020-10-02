@@ -104,6 +104,15 @@ A menu of all the functions is listed below:
 - <a href="https://github.com/Cy4Shot/cyutils#magnitude">Magnitude</a>
 - <a href="https://github.com/Cy4Shot/cyutils#normalize">Normalize</a>
 - <a href="https://github.com/Cy4Shot/cyutils#distance">Distance</a>
+- <a href="https://github.com/Cy4Shot/cyutils#lerp">Lerp</a>
+- <a href="https://github.com/Cy4Shot/cyutils#up">Up</a>
+- <a href="https://github.com/Cy4Shot/cyutils#down">Down</a>
+- <a href="https://github.com/Cy4Shot/cyutils#left">Left</a>
+- <a href="https://github.com/Cy4Shot/cyutils#right">Right</a>
+- <a href="https://github.com/Cy4Shot/cyutils#one">One</a>
+- <a href="https://github.com/Cy4Shot/cyutils#zero">Zero</a>
+- <a href="https://github.com/Cy4Shot/cyutils#positive-infinity">Positive Infinity</a>
+- <a href="https://github.com/Cy4Shot/cyutils#negative-infinity">Negative Infinity</a>
 #### Magnitude
 You can use the `magnitude` function to get the magnitude of a vector. You can see an implementation below:
 ```python
@@ -173,3 +182,81 @@ print(mySecondVector) # Vector2: (8, 10)
 distance = myFirstVector.distanceTo(mySecondVector)
 print(distance) # 9.219544457292887
 ```
+#### Lerp
+You can use the `lerp` function to lerp on the line between two different vectors. You can see an implementation below:
+```python
+from cyutils.tools.math import Vector2
+
+myFirstVector = Vector2(2, 3)
+print(myFirstVector) # Vector2: (2, 3)
+
+mySecondVector = Vector2(8, 10)
+print(mySecondVector) # Vector2: (8, 10)
+
+lerped = Vector2.lerp(myFirstVector, mySecondVector, 0.8)
+print(lerped) # Vector2: (3.1999999999999997, 4.4)
+```
+#### Up
+The `up` function returns the Vector (0, 1):
+```python
+from cyutils.tools.math import Vector2
+
+vector = Vector2.up()
+print(vector) # Vector2: (0, 1)
+```
+#### Down
+The `down` function returns the Vector (0, -1):
+```python
+from cyutils.tools.math import Vector2
+
+vector = Vector2.down()
+print(vector) # Vector2: (0, -1)
+``` 
+#### Left
+The `left` function returns the Vector (-1, 0):
+```python
+from cyutils.tools.math import Vector2
+
+vector = Vector2.left()
+print(vector) # Vector2: (-1, 0)
+``` 
+#### Right
+The `right` function returns the Vector (1, 0):
+```python
+from cyutils.tools.math import Vector2
+
+vector = Vector2.right()
+print(vector) # Vector2: (1, 0)
+``` 
+#### One
+The `one` function returns the Vector (1, 1):
+```python
+from cyutils.tools.math import Vector2
+
+vector = Vector2.one()
+print(vector) # Vector2: (1, 1)
+``` 
+#### Zero
+The `zero` function returns the Vector (0, 0):
+```python
+from cyutils.tools.math import Vector2
+
+vector = Vector2.zero()
+print(vector) # Vector2: (0, 0)
+```
+#### Positive Infinity
+The `positiveInfinity` function returns the Vector (infinity, infinity):
+```python
+from cyutils.tools.math import Vector2
+
+vector = Vector2.positiveInfinity()
+print(vector) # Vector2: (inf, inf)
+``` 
+#### Negative Infinity
+The `negativeInfinity` function returns the Vector (-infinity, -infinity):
+```python
+from cyutils.tools.math import Vector2
+
+vector = Vector2.negativeInfinity()
+print(vector) # Vector2: (-inf, -inf)
+``` 
