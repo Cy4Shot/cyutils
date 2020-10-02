@@ -103,6 +103,7 @@ The Vector2 Module also contains some functions. You can see them below:
 A menu of all the functions is listed below:
 - <a href="https://github.com/Cy4Shot/cyutils#magnitude">Magnitude</a>
 - <a href="https://github.com/Cy4Shot/cyutils#normalize">Normalize</a>
+- <a href="https://github.com/Cy4Shot/cyutils#distance">Distance</a>
 #### Magnitude
 You can use the `magnitude` function to get the magnitude of a vector. You can see an implementation below:
 ```python
@@ -144,4 +145,31 @@ print(myVector) # Vector2: (2, 3)
 
 normalizedVec = myVector.normalized()
 print(normalizedVec) # Vector2: (0.5547001962252291, 0.8320502943378437)
+```
+#### Distance
+You can use the `distance` function to calculate the distance between two Vector2s. You can see an implementation below:
+```python
+from cyutils.tools.math import Vector2
+
+myFirstVector = Vector2(2, 3)
+print(myFirstVector) # Vector2: (2, 3)
+
+mySecondVector = Vector2(8, 10)
+print(mySecondVector) # Vector2: (8, 10)
+
+distance = Vector2.distance(myFirstVector, mySecondVector)
+print(distance) # 9.219544457292887
+```
+You can also use the non-static `distanceTo` function to calculate the distance between itself and another Vector2. You can see an implementation below:
+```python
+from cyutils.tools.math import Vector2
+
+myFirstVector = Vector2(2, 3)
+print(myFirstVector) # Vector2: (2, 3)
+
+mySecondVector = Vector2(8, 10)
+print(mySecondVector) # Vector2: (8, 10)
+
+distance = myFirstVector.distanceTo(mySecondVector)
+print(distance) # 9.219544457292887
 ```
