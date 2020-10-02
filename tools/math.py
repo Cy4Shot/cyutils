@@ -64,5 +64,68 @@ class Vector2:
     def __eq__(self, other):
         return self.x == other.x and self.y == other.y
     
+    @staticmethod
+    def up():
+        return Vector2(0, 1)
+
+    @staticmethod
+    def down():
+        return Vector2(0, -1)
+
+    @staticmethod
+    def left():
+        return Vector2(-1, 0)
+
+    @staticmethod
+    def right():
+        return Vector2(1, 0)
+
+    @staticmethod
+    def one():
+        return Vector2(1, 1)
+
+    @staticmethod
+    def zero():
+        return Vector2(0, 0)
+    
+    @staticmethod
+    def positiveInfinity():
+        return Vector2(float("inf"), float("inf"))
+        
+    @staticmethod
+    def negativeInfinity():
+        return Vector2(float("-inf"), float("-inf"))
+
+    @staticmethod
+    def distance(v1, v2):
+        return (abs(v2.x - v1.x) ** 2 + abs(v2.y - v1.y) ** 2) ** 0.5
+
+    def distanceTo(self, v2):
+        return (abs(v2.x - self.x) ** 2 + abs(v2.y - self.y) ** 2) ** 0.5
+
+    def magnitude(self):
+        return (self.x * self.x + self.y * self.y) ** 0.5
+
+    def sqrMagnitude(self):
+        return self.x * self.x + self.y * self.y
+
+    def normalized(self):
+        if(self.magnitude() > 0):
+            return self / self.magnitude()
+        else:
+            ce.CustomError("DivideByZeroError").throw("Cannot normalize non existant vector.")
+    
+    def normalize(self):
+        nVec = self.normalized()
+        self.set_components(nVec.x, nVec.y)
+
+    def set_components(self, x, y):
+        self.x = x
+        self.y = y
+
+    @staticmethod
+    def lerp(v1, v2, t):
+        return v1 * t + (1 - t) * v2
+
     
     

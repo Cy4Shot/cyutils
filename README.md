@@ -7,6 +7,7 @@
 - <a href="https://github.com/Cy4Shot/cyutils#installation">Installation</a>
 - <a href="https://github.com/Cy4Shot/cyutils#colored-text-module">Colored Text Module</a>
 - <a href="https://github.com/Cy4Shot/cyutils#message-boxes-module">Message Boxes Module</a>
+- <a href="https://github.com/Cy4Shot/cyutils#vector2-module">Vector2 Module</a>
 
 ## Installation
 
@@ -83,3 +84,64 @@ vbMsgBoxHelpButton | 16384 | Adds Help button to the message box.
 vbMsgBoxSetForeground | 65536 | Specifies the message box window as the foreground window.
 vbMsgBoxRight | 524288 | Text is right-aligned.
 vbMsgBoxRtlReading | 1048576 | Specifies text should appear as right-to-left reading on Hebrew and Arabic systems.
+
+## Vector2 Module
+The Vector2 Module allows the creation and manipulation of 2 dimensional vectors in python. To begin, import the Vector2 module:
+```python
+from cyutils.tools.math import Vector2
+```
+You can now create a vector with a simple command. The following code creates the vector (2, 3) and assigns it to a variable, `x`:
+```python
+from cyutils.tools.math import Vector2
+
+x = Vector2(2, 3)
+```
+You can now manipulate this with standard operators, such as `+`, `-`, `*`, `/`, `//` and check if vectors are equal with `==`.
+> Using a standard operator between two vector will do the operation to their X and Y values, whereas doing a standard operation between a vector and an int or float will apply the operation to both X and Y values with the said int or float.
+The Vector2 Module also contains some functions. You can see them below:
+### Vector2 Module: Functions
+A menu of all the functions is listed below:
+- <a href="https://github.com/Cy4Shot/cyutils#magnitude">Magnitude</a>
+- <a href="https://github.com/Cy4Shot/cyutils#normalize">Normalize</a>
+#### Magnitude
+You can use the `magnitude` function to get the magnitude of a vector. You can see an implementation below:
+```python
+from cyutils.tools.math import Vector2
+
+myVector = Vector2(2, 3)
+print(myVector) # Vector2: (2, 3)
+
+magnitude = myVector.magnitude()
+print(magnitude) # 3.605551275463989
+```
+You can also get the square magnitude of a vector by using the `sqrMagnitude` function. This is useful if you want to compare two vectors as this function is faster than the `magnitude` function. You can see an implementation below:
+```python
+from cyutils.tools.math import Vector2
+
+myVector = Vector2(2, 3)
+print(myVector) # Vector2: (2, 3)
+
+magnitude = myVector.sqrMagnitude()
+print(magnitude) # 13
+```
+#### Normalize
+You can use the `normalize` function to get the normalized Vector. That is a Vector where all the values are between 0 and 1. You can see an implementation below:
+```python
+from cyutils.tools.math import Vector2
+
+myVector = Vector2(2, 3)
+print(myVector) # Vector2: (2, 3)
+
+myVector.normalize()
+print(myVector) # Vector2: (0.5547001962252291, 0.8320502943378437)
+```
+You can also use the `normalized` function which returns a new vector instead of changing the old one. You can see an implementation below:
+```python
+from cyutils.tools.math import Vector2
+
+myVector = Vector2(2, 3)
+print(myVector) # Vector2: (2, 3)
+
+normalizedVec = myVector.normalized()
+print(normalizedVec) # Vector2: (0.5547001962252291, 0.8320502943378437)
+```
