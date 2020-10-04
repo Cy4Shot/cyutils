@@ -7,6 +7,7 @@
 - <a href="https://github.com/Cy4Shot/cyutils#installation">Installation</a>
 - <a href="https://github.com/Cy4Shot/cyutils#colored-text-module">Colored Text Module</a>
 - <a href="https://github.com/Cy4Shot/cyutils#message-boxes-module">Message Boxes Module</a>
+- <a href="https://github.com/Cy4Shot/cyutils#custom-error-module">Custom Error Module</a>
 - <a href="https://github.com/Cy4Shot/cyutils#vector2-module">Vector2 Module</a>
 - <a href="https://github.com/Cy4Shot/cyutils#lists-module">Lists Module</a>
 
@@ -85,6 +86,37 @@ vbMsgBoxHelpButton | 16384 | Adds Help button to the message box.
 vbMsgBoxSetForeground | 65536 | Specifies the message box window as the foreground window.
 vbMsgBoxRight | 524288 | Text is right-aligned.
 vbMsgBoxRtlReading | 1048576 | Specifies text should appear as right-to-left reading on Hebrew and Arabic systems.
+
+## Custom Error Module
+The Custom Error module allows you to create an error without using `raise` or showing the lines of code that the error occured in. To begin, import the Custom Error module:
+```python
+from cyutils.io.custom_error import CustomError
+```
+The title of an error is the name of the error you want to throw. This is not restricted to default python error names, it can be anything! You can throw a basic error like this:
+```python
+from cyutils.io.custom_error import CustomError
+
+CustomError("<Title of Error>").throw("<Error Message>")
+```
+The custom error can also be stored as a variable and thrown later:
+```python
+from cyutils.io.custom_error import CustomError
+
+myError = CustomError("<Title of Error>")
+
+#SOME CODE HERE
+
+myError.throw("<Error Message>")
+```
+You can also configure the error so that it doesn't exit after sending the message to the console:
+```python
+from cyutils.io.custom_error import CustomError
+
+myError = CustomError("<Title of Error>", exitOnError=False)
+myError.throw("<Error Message>")
+
+print("HELLO WORLD") # HELLO WORLD
+```
 
 ## Vector2 Module
 The Vector2 Module allows the creation and manipulation of 2 dimensional vectors in python. To begin, import the Vector2 module:
