@@ -8,6 +8,7 @@
 - <a href="https://github.com/Cy4Shot/cyutils#colored-text-module">Colored Text Module</a>
 - <a href="https://github.com/Cy4Shot/cyutils#message-boxes-module">Message Boxes Module</a>
 - <a href="https://github.com/Cy4Shot/cyutils#vector2-module">Vector2 Module</a>
+- <a href="https://github.com/Cy4Shot/cyutils#lists-module">Lists Module</a>
 
 ## Installation
 
@@ -259,4 +260,52 @@ from cyutils.tools.math import Vector2
 
 vector = Vector2.negativeInfinity()
 print(vector) # Vector2: (-inf, -inf)
-``` 
+```
+
+## Lists Module
+The lists module allows for easier manipulation and creation of lists in python. You can import the module like this:
+```python
+from cyutils.tools import lists
+```
+The lists module comes with a few functions:
+- <a href="https://github.com/Cy4Shot/cyutils#empty-list">Empty List</a>
+- <a href="https://github.com/Cy4Shot/cyutils#flatten-list">Flatten List</a>
+- <a href="https://github.com/Cy4Shot/cyutils#list-total">List Total</a>
+#### Empty List
+The `empty list` function allows you to create a multi-dimensional square list, filled with zeros with a single line of code. You can see an implementation below:
+```python
+from cyutils.tools import lists
+
+list1 = lists.empty_list(5, dimensions=1)
+print(list1) # [0.0, 0.0, 0.0, 0.0, 0.0]
+
+list2 = lists.empty_list(3, dimensions=2)
+print(list2) # [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+list3 = lists.empty_list(2, dimensions=3)
+print(list3) # [[[0.0, 0.0], [0.0, 0.0]], [[0.0, 0.0], [0.0, 0.0]]]
+```
+#### Flatten List
+The `flatten list` function allows you to flatten a multidimensional list into a one dimensional list. You can see an implementation below:
+```python
+from cyutils.tools import lists
+
+multidimensional_list = lists.empty_list(2, dimensions=3)
+print(multidimensional_list) # [[[0.0, 0.0], [0.0, 0.0]], [[0.0, 0.0], [0.0, 0.0]]]
+
+onedimensional_list = lists.flatten_list(multidimensional_list)
+print(onedimensional_list) # [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+```
+#### List Total
+The `list total` function allows you to get the sum of all the ints or floats in a multidimensional list. You can see an implementation below:
+```python
+from cyutils.tools import lists
+
+myList = lists.empty_list(2, dimensions=3)
+myList[0][1][1] = 4
+myList[1][0][1] = 3
+print(myList) # [[[0.0, 0.0], [0.0, 4]], [[0.0, 3], [0.0, 0.0]]]
+
+total = lists.list_total(myList)
+print(total) # 7.0
+```
