@@ -24,11 +24,6 @@ You can install CyUtils with <a href="https://pip.pypa.io/en/stable/installing/"
 pip install cyutils
 ```
 
-Now at the top of your python library add:
-```python
-import cyutils
-```
-
 ## Colored Text Module
 To print colored text, you first need to import the colored text module:
 ```python
