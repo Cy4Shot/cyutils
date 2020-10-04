@@ -1,3 +1,8 @@
+[![PyPI version](https://badge.fury.io/py/cyutils.svg)](https://badge.fury.io/py/cyutils)
+[![PyPI license](https://img.shields.io/pypi/l/cyutils.svg)](https://pypi.python.org/pypi/cyutils/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/cyutils.svg)](https://pypi.python.org/pypi/cyutils/)
+[![Downloads](https://pepy.tech/badge/cyutils)](https://pepy.tech/project/cyutils)
+
 # CyUtils
  
  CyUtils is an all purpose package library for python. It currently adds Colored Text, Message Boxes, Extra List Functions, Ciphers.
@@ -14,7 +19,7 @@
 
 ## Installation
 
-You can install CyUtils with <a href="https://pip.pypa.io/en/stable/installing/">pip</a>! Once you have installed pip, open Command Prompt or Powershell and type:
+You can install CyUtils with <a href="https://pip.pypa.io/en/stable/installing/">pip</a>! Once you have installed pip, open Command Prompt, Terminal or Powershell and type:
 ```
 pip install cyutils
 ```
