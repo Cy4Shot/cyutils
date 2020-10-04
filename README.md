@@ -10,6 +10,7 @@
 - <a href="https://github.com/Cy4Shot/cyutils#custom-error-module">Custom Error Module</a>
 - <a href="https://github.com/Cy4Shot/cyutils#vector2-module">Vector2 Module</a>
 - <a href="https://github.com/Cy4Shot/cyutils#lists-module">Lists Module</a>
+- <a href="https://github.com/Cy4Shot/cyutils#cipher-module">Cipher Module</a>
 
 ## Installation
 
@@ -340,4 +341,66 @@ print(myList) # [[[0.0, 0.0], [0.0, 4]], [[0.0, 3], [0.0, 0.0]]]
 
 total = lists.list_total(myList)
 print(total) # 7.0
+```
+
+## Cipher Module
+The cipher module allows you to easily manipulate ciphers in python. CyUtils currently only supports two ciphers:
+- <a href="https://github.com/Cy4Shot/cyutils#ceasar-cipher">Ceasar Cipher</a>
+- <a href="https://github.com/Cy4Shot/cyutils#vignere-cipher">Vignere Cipher</a>
+#### Ceasar Cipher
+You can import the ceasar cipher module like this:
+```python
+from cyutils.tools.cipher import CeasarCipher
+```
+With the module imported, the ceasar cipher can be created like a variable:
+```python
+from cyutils.tools.cipher import CeasarCipher
+
+myCipher = CeasarCipher(5)
+print(myCipher) # Ceasar Cipher with shift: 5
+```
+Now, you can use the `encode` and `decode` functions to use the ceasar cipher with the shift set above:
+```python
+from cyutils.tools.cipher import CeasarCipher
+
+myCipher = CeasarCipher(5)
+print(myCipher) # Ceasar Cipher with shift: 5
+
+encoded = myCipher.encode("helloworld")
+print(encoded) # mjqqtbtwqi
+
+decoded = myCipher.decode(encoded)
+print(decoded) # helloworld
+```
+You can also use the `sysencode` function to encode it by using a custom key:
+```python
+from cyutils.tools.cipher import CeasarCipher
+
+encoded = CeasarCipher.sysencode("helloworld", 5)
+print(encoded) # mjqqtbtwqi
+```
+#### Vignere Cipher
+You can import the vignere cipher like this:
+```python
+from cyutils.tools.cipher import VignereCipher
+```
+With the module imported, the vignere cipher can be created like a variable:
+```python
+from cyutils.tools.cipher import VignereCipher
+
+myCipher = VignereCipher("KEY")
+print(myCipher) # Vignere Cipher with key: KEY
+```
+Now, you can use the `encode` and `decode` functions to use the vignere cipher with the key set above:
+```python
+from cyutils.tools.cipher import VignereCipher
+
+myCipher = VignereCipher("KEY")
+print(myCipher) # Vignere Cipher with key: KEY
+
+encoded = myCipher.encode("HELLOWORLD")
+print(encoded) # RIJVSUYVJN
+
+decoded = myCipher.decode(encoded)
+print(decoded) # HELLOWORLD
 ```
