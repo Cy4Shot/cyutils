@@ -5,8 +5,8 @@
 
 # CyUtils
  
- CyUtils is an all purpose package library for python. It currently adds Colored Text, Message Boxes, Extra List Functions, Ciphers.
- CyUtils will soon have support for Vector2 and Vector3s.
+ CyUtils is an all purpose package library for python. It currently adds Colored Text, Message Boxes, Vector2s, Extra List Functions, Ciphers.
+ CyUtils will soon have support Vector3s.
 
 # Main menu:
 - <a href="https://github.com/Cy4Shot/cyutils#installation">Installation</a>
